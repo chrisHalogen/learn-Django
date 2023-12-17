@@ -1,0 +1,14 @@
+<h1>Welcome to the dashboard</h1>
+
+{% if user.is_authenticated %}
+
+<h2>You are logged in as...{{ user.get_username }}</h2>
+
+<br>
+<a href="{% url 'logout' %}">Logout</a>
+
+{% else %}
+<h2>You are not logged in</h2>
+<br>
+<a href="{% url 'login' %}">Login</a>
+{% endif %}

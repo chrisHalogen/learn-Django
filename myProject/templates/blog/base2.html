@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+
+<body>
+    <header id="header">
+        <span>This is the Site Header</span>
+    </header>
+    <br><br>
+    <div id="content">{% block content %}{% endblock %}</div>
+    <br><br>
+
+    <footer id="footer"><span>This is the site footer</span></footer>
+</body>
+
+</html>

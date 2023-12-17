@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}This is the Homepage{% endblock %}
+
+{% block header %}
+<center>
+    <h1>This is the Home Header</h1>
+</center>
+{% endblock %}
+
+{% block content %}
+<h2>This is the body of the home</h2>
+<h2>Logged in as {{ user|truncatechars:5 }} with total points of {{ total_point|default:"00" }}</h2>
+<p>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, similique
+    eius maiores eligendi sapiente tempora blanditiis a dolor quidem consequuntur
+    unde quod, iusto quibusdam molestiae suscipit laboriosam iure incidunt
+    temporibus necessitatibus, quisquam odit pariatur atque. Alias, consectetur!
+    Incidunt, odio magnam ullam voluptas optio a. Ducimus, alias repellendus. Sit,
+    repellendus consequatur.
+</p>
+<img src="{% static 'JD.jpeg' %}" alt="one image">
+<br>
+{% endblock %}
+
+{% block footer %}
+<center>
+    <h1>This is the footer of the site</h1>
+</center>
+{% endblock %}

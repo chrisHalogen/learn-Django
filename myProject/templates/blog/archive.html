@@ -1,0 +1,25 @@
+{% extends './base2.html' %}
+{% load static %}
+{% block title %}Blog Archive Page{% endblock %}
+
+{% block content %}
+
+<div class="archive">
+
+    {% for blog in blogs %}
+
+    <div class="blog-single">
+        <img src="{% static 'news.jpg' %}" alt="Breaking news">
+        <div class="text-content">
+            <h3>{{blog.title}}</h3>
+            <p>{{blog.excerpt|truncatechars:80}}</p>
+            <a href="{% url 'blog_detail' pk=blog.pk %}">Read More</a>
+        </div>
+
+    </div>
+
+    {% endfor %}
+</div>
+
+
+{% endblock %}

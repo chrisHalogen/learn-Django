@@ -1,0 +1,10 @@
+<h1>{{ student.first_name }}'s Details</h1>
+
+<p>Full Name : {{ student.first_name }} {{ student.last_name }}</p>
+<p>Age : {{ student.age }}</p>
+<p>Mother's Maiden name : {{ student.mothers_maiden_name }}</p>
+<p>Biography : {{ student.biography }}</p>
+<br>
+<a href="{% url 'student_update' pk=student.pk %}">Edit</a>
+<br>
+<a href="{% url 'student_delete' pk=student.pk %}">Delete</a>
